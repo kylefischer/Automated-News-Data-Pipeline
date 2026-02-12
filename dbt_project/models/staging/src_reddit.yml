@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: raw
+    database: REDDIT_AI_NEWS
+    schema: RAW
+    tables:
+      - name: reddit_posts
+
+models:
+  - name: stg_reddit_posts
+    columns:
+      - name: post_id
+        tests: [not_null]
+      - name: title
+        tests: [not_null]
+      - name: load_date
+        tests: [not_null]

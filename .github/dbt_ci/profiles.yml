@@ -1,0 +1,14 @@
+# CI-only profile: used by GitHub Actions to validate SQL without a Snowflake connection
+reddit_ai_news:
+  target: ci
+  outputs:
+    ci:
+      type: snowflake
+      account: ci-placeholder
+      user: ci-placeholder
+      password: ci-placeholder
+      role: ci-placeholder
+      warehouse: ci-placeholder
+      database: REDDIT_AI_NEWS
+      schema: STAGING
+      threads: 1
